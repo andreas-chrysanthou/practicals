@@ -1,5 +1,3 @@
-
-
 def convect(nt, nx, tmax, xmax, c):
    """
    Returns the velocity field and distance for 1D linear convection
@@ -49,7 +47,6 @@ def plot_convect(u,x,nt,title):
       plt.title(title)
       plt.show()
  
- 
-u,x = convect(151, 51, 0.3, 2.0, 0.5)
-plot_convect(u,x,151,'Figure 1: c=0.3m/s, nt=151, nx=51, tmax=0.5s')
+u,x = convect(151, 51, 0.5, 2.0, 0.9)
+plot_convect(u,x,151,'Figure 1: c=0.5m/s, nt=151, nx=51, tmax=0.5s')
 
