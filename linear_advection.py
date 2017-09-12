@@ -52,10 +52,4 @@ def plot_convect(u,x,nt,title):
  
 u,x = convect(151, 51, 0.3, 2.0, 0.5)
 plot_convect(u,x,151,'Figure 1: c=0.3m/s, nt=151, nx=51, tmax=0.5s')
- 
-#u,x = convect(151, 1001, 0.5, 2.0, 0.5)
-#plot_convection(u,x,151,'Figure 2: c=0.5m/s, nt=151, nx=1001, tmax=0.5s')
- 
-#u,x = convect(151, 51, 2.0, 2.0, 0.5)
-#plot_convection(u,x,151,'Figure 3: c=0.5m/s, nt=151, nx=51, tmax=2s')
 
