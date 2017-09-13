@@ -16,7 +16,7 @@ x = np.linspace (0.0, 1.0, nx+1)
 phi = initialBell(x)
 phiNew = phi.copy()
 phiOld = phi.copy()
-
+phi2 = initialBell(x)
 phiNew2 = phi.copy()
 phiOld2 = phi.copy()
 
@@ -25,7 +25,7 @@ phiOld2 = phi.copy()
 
 for j in xrange(1, nx):
     phi[j] = phiOld[j] - 0.5 *c*(phiOld[j+1] - phiOld[j-1])
-    
+    phi2[j] = phiOld2[j] - 0.5 *c*(phiOld2[j+1] - phiOld2[j-1])
 # apply periodic conditions
 phi[0]= phiOld[0] - 0.5*c*(phiOld[1] - phiOld[nx-1])
 phi[nx] = phi[0]
@@ -48,9 +48,8 @@ for n in xrange (1,nt):
 
 
 #Loop over remaining time-steps (nt) using FTCS
-nt2=40
 
-for n in xrange (1,nt2):
+for n in xrange (1,nt):
 # loop over space
     for j in xrange (1 ,nx):
         phiNew2[j] = phiOld2[j] - 0.5*c*(phi[j+1] - phi[j-1])
