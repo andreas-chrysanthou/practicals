@@ -16,6 +16,7 @@ x = np.linspace (0.0, 1.0, nx+1)
 phi = initialBell(x)
 phiNew = phi.copy()
 phiOld = phi.copy()
+
 phi2 = initialBell(x)
 phiNew2 = phi.copy()
 phiOld2 = phi.copy()
